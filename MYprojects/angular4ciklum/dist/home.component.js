@@ -14,6 +14,7 @@ var main_service_1 = require("./main.service");
 var HomeComponent = (function () {
     function HomeComponent(mainService) {
         this.mainService = mainService;
+        this.message = 'Im home component';
     }
     HomeComponent.prototype.getPolicies = function () {
         this.policies = this.mainService.getPolicies();
@@ -25,12 +26,11 @@ var HomeComponent = (function () {
 HomeComponent = __decorate([
     core_1.Component({
         selector: 'home-page',
-        template: "<p>{{policies}}</p>"
+        templateUrl: './app/home.component.html',
+        styleUrls: ['./app/home.component.css'],
+        providers: [main_service_1.MainService]
     }),
     __metadata("design:paramtypes", [main_service_1.MainService])
 ], HomeComponent);
 exports.HomeComponent = HomeComponent;
-/**
- * Created by Окси on 21.02.2017.
- */
 //# sourceMappingURL=home.component.js.map

@@ -4,10 +4,13 @@ import { Observable } from "rxjs/Observable";
 
 @Component({
     selector: 'home-page',
-    template: `<p>{{policies}}</p>`
+    templateUrl: './app/home.component.html',
+    styleUrls: ['./app/home.component.css'],
+    providers: [ MainService ]
 })
 
 export class HomeComponent implements OnInit{
+    message: string = 'Im home component';
 
     policies: Observable<string[]>;
 
@@ -22,7 +25,3 @@ export class HomeComponent implements OnInit{
 }
 
 
-
-/**
- * Created by Окси on 21.02.2017.
- */

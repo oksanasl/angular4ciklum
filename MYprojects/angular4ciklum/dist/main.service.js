@@ -22,7 +22,7 @@ var MainService = (function () {
         // TODO: Add error handling
         return this.jsonp
             .get(gigyaUrl + queryString)
-            .map(function (response) { return response.json()[1]; });
+            .map(function (response) { return response.json().myCallback["accountOptions"]; });
     };
     return MainService;
 }());
@@ -31,7 +31,4 @@ MainService = __decorate([
     __metadata("design:paramtypes", [http_1.Jsonp])
 ], MainService);
 exports.MainService = MainService;
-/**
- * Created by vlaz on 5/27/2017.
- */
 //# sourceMappingURL=main.service.js.map
